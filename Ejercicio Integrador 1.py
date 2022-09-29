@@ -5,7 +5,7 @@
 #El precio: (validar entre 100 y 300)
 #La cantidad de unidades ( no puede ser 0 ni negativo y no debe superar las 1000 unidades)
 #La marca y el Fabricante.
-  
+
 # Se debe informar lo siguiente:
 #A-Del más caro de los barbijos, la cantidad de unidades y el fabricante.
 #B-Del ítem con más unidades, el fabricante.
