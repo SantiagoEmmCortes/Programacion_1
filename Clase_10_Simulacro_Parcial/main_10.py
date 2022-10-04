@@ -13,6 +13,7 @@ from func_10 import *
 def parcial():
     lista_heroes = leer_json("Clase_10_Simulacro_Parcial/data_stark.json")
     lista_para_csv = []
+    opcion_anterior = ""
     while True:
         print("1 - Listar los primeros N héroes\n2 - Ordenar y Listar héroes por altura (asc/desc)\n"
             "3 - Ordenar y Listar héroes por fuerza (asc/desc)\n"
@@ -21,7 +22,6 @@ def parcial():
             "6 - Exportar lista de héroes a CSV ordenados segun opcion elegida anteriormente\n7 - Salir")
         opcion = input("Seleccione opcion: ")
         opcion = validar_respuesta(opcion, "^[1-7]{1}$")
-        opcion_anterior = ""
         if opcion == "1":
             cantidad = input("Cantidad de heroes a mostrar: ")
             cantidad_heroes = validar_respuesta(cantidad, "^[0-9]{1,2}$")

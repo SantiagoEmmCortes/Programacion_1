@@ -81,8 +81,7 @@ def ordenar_clave_asc_desc(lista:list, clave:str, orden:str="asc") -> list:
     lista_ordenada = lista.copy()
     for i in range(len(lista_ordenada)):
         index_min_max = buscar_min_max(lista_ordenada[i:], clave, orden) + i
-        lista_ordenada[i],lista_ordenada[index_min_max] =\
-         lista_ordenada[index_min_max],lista_ordenada[i]
+        lista_ordenada[i],lista_ordenada[index_min_max] = lista_ordenada[index_min_max],lista_ordenada[i]
     return lista_ordenada
 
 def calcular_promedio_clave(lista:list, clave:str) -> int:
@@ -149,7 +148,7 @@ def exportar_csv(opcion:str, lista_guardar:list, clave:str="fuerza"):
     nombre_archivo = "lista_{0}.csv".format(opcion)
     contenido_guardar = ""
     for heroe in lista_guardar:
-        contenido_guardar += "Nombre: {0} - Identidad: {1} - {2}: {3},".format(heroe["nombre"], heroe["identidad"], clave.capitalize(), heroe[clave])
+        contenido_guardar += "Nombre: {0}, Identidad: {1}, {2}: {3}\n".format(heroe["nombre"], heroe["identidad"], clave.capitalize(), heroe[clave])
     try:
         with open(nombre_archivo,"w+") as archivo:
             archivo.write(contenido_guardar)
